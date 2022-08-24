@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /*Quita selecion cuadro azul*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.div__contenedor {
+    margin-top: 80px;
+    margin-left: 187px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+    position: absolute;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.div__princimal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div__navbar {
+    color: white;
+    width: 100%;
+    height: 60px;
+    background: #363A3D;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    display: flex;
+}
+
+.div__notify {
+    position: fixed;
+    left: 90vw;
+}
+
+.div__user {
+    position: fixed;
+    left: 95vw;
+    background-color: white;
+    color: white;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+}
+
+.text__spacin {
+    margin-left: 5px;
+}
+
+.menu__side {
+    width: 180px;
+    height: 100%;
+    background: rgb(240, 240, 240);
+    position: fixed;
+    top: 100;
+    left: 0;
+    color: white;
+    overflow: hidden;
+    overflow-y: scroll;
+    opacity: 0.95;
+    z-index: 1;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+
+/*Ocultar scroll para chrome, safari y opera*/
+
+.menu__side::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*Ocultar scroll para IE, Edge y Firefox*/
+
+.menu__side {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.name__page {
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background-color: bisque;
+}
+
+.name__page i {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.options__menu {
+    background: rgb(240, 240, 240);
+    padding: 5px 5px;
+    position: absolute;
+    top: 80px;
+    font-size: 16px;
+}
+
+
+/* Botones con submenus*/
+
+.nav__link {
+    color: #303440;
+    display: block;
+    padding: 10px 0px;
+    font-size: 13.5px;
+    text-decoration: none;
+}
+
+.nav__link--inside {
+    padding-left: 5px;
+    text-align: left;
+}
+
+.nav__link--inside:hover {
+    background: #F6F8FA;
+}
+
+.list__item {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.list__button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+}
+
+.disable-selection {
+    -webkit-touch-callout: none;
+    /* Disable Android and iOS callouts*/
+}
+
+
+/*Boton del menu hamburguesa*/
+
+.menu__button {
+    display: none;
+    width: 40px;
+    padding-left: 15px;
+}
+
+
+/*botones simples*/
+
+.single__button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 240px;
+    overflow: hidden;
+    height: auto;
+    cursor: pointer;
+}
+
+.single__button :hover {
+    background: #F6F8FA;
+}
+
+.list__show {
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid #303440;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}
+
+.arrow .list__arrow {
+    transform: rotate(90deg);
+}
+
+.list__arrow {
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+
+/*Clases para usar en JavaScript*/
+
+.body_move {
+    margin-left: -180px;
+}
+
+.menu__side_move {
+    width: -180px;
+}
+
+@media screen and (max-width: 900px) {
+    #btn_open {
+        display: block;
+    }
+    .body_move {
+        margin-left: 0px;
+    }
+    .menu__side_move {
+        width: 80px;
+        left: -80px;
+    }
+    .div__contenedor {
+        margin-left: 0px;
+    }
+    .div__notify {
+        left: 75vw;
+    }
+    .div__user {
+        left: 85vw;
+    }
+}
